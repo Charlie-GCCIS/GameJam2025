@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum StartPosition
 {
@@ -31,6 +33,11 @@ public class MonsterMovement : MonoBehaviour
 
     [SerializeField]
     SpawnMonster spawner;
+
+    [SerializeField]
+    GameObject playerObject;
+
+    bool roaming = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -67,8 +74,39 @@ public class MonsterMovement : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        velocity = moveDirection * speed * Time.fixedDeltaTime;
-        Vector2 newPos = (Vector2)transform.position + velocity;
-        rb.MovePosition(newPos);
+        if (roaming)
+        {
+            velocity = moveDirection * speed * Time.fixedDeltaTime;
+            Vector2 newPos = (Vector2)transform.position + velocity;
+            rb.MovePosition(newPos);
+        }
+        else
+        {
+            Vector3 targetPos = playerObject.transform.position - transform.position;
+            float targetSpin = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
+            Quaternion turnRotation = Quaternion.Euler(0, 0, targetSpin + transform.rotation.z);
+            transform.rotation = turnRotation;
+            Debug.Log(playerObject.transform.position);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            roaming = false;
+            Debug.Log("Player");
+        }
+        Debug.Log("Not Player");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            roaming = true;
+            Debug.Log("Player");
+        }
+        Debug.Log("Not Player");
     }
 }
