@@ -17,6 +17,6 @@ public class EnterPlay : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameScene");
     }
 }
