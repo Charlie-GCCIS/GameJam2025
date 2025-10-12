@@ -6,7 +6,11 @@ public class SpawnMonster : MonoBehaviour
     [SerializeField]
     GameObject monster;
 
-    float timer;
+    [SerializeField]
+    GameObject child;
+
+    float timerMonster;
+    float timerChild;
     int currentRandom;
 
     [SerializeField]
@@ -41,18 +45,28 @@ public class SpawnMonster : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timer = 0;
+        timerMonster = 0;
+        timerChild = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= 2)
+        timerMonster += Time.deltaTime;
+        timerChild += Time.deltaTime;
+        if (timerMonster >= 2)
         {
             Instantiate(monster, monster.transform.position, Quaternion.identity);
-            timer = 0;
+            timerMonster = 0;
         }
+
+        timerMonster += Time.deltaTime;
+        if (timerChild >= 3)
+        {
+            Instantiate(child, child.transform.position, Quaternion.identity);
+            timerChild = 0;
+        }
+
     }
 
     public int GetDifferentRandom()
