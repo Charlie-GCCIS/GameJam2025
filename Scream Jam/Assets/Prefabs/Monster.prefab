@@ -136,7 +136,8 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   spawnPosition: 0
   spawner: {fileID: 8899263776906582018, guid: fd9bbc65a8f81834997da92a3c39f547, type: 3}
-  playerObject: {fileID: 712633602426041980, guid: 384edb1220940b94580fd74293c20f71, type: 3}
+  playerObject: {fileID: 481369064650289411, guid: 384edb1220940b94580fd74293c20f71, type: 3}
+  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!70 &-7055433451705022583
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

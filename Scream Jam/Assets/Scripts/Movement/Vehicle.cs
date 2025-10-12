@@ -23,6 +23,8 @@ public class Vehicle : MonoBehaviour
 
     Vector2 screenBounds;
 
+    SpawnMonster spawner;
+
     public int Score { get { return score; } set { score = value; } }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,6 +50,14 @@ public class Vehicle : MonoBehaviour
             rb.MovePosition(newPos);
         }
         
+    }
+
+    private void Update()
+    {
+        if (SpawnMonster.Instance != null)
+        {
+            SpawnMonster.Instance.PlayerPosition = transform.position;
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
