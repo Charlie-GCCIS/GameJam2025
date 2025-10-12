@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster: {fileID: 8049407185791127364, guid: ba6ad96de13e61a45922f2499cf459ac, type: 3}
+  child: {fileID: 4274892114799616518, guid: 4502899dc8637ae4e80b8a241e26d720, type: 3}
   playerObject: {fileID: 1308388485}
 --- !u!4 &990901080
 Transform:
