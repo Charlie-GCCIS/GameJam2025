@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7055433451705022583}
   m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1528536886979165027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,10 +131,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   velocity: {x: 0, y: 0}
+  path: {x: 0, y: 0, z: 0}
   moveDirection: {x: 0, y: 0}
   rb: {fileID: -4699108001272933092}
   position: {x: 0, y: 0}
   spawnPosition: 0
+  roaming: 1
+  onPath: 1
 --- !u!70 &-7055433451705022583
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +168,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
