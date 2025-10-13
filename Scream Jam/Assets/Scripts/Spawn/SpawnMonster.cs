@@ -60,14 +60,14 @@ public class SpawnMonster : MonoBehaviour
             if (timerMonster >= 4)
             {
                 Instantiate(monster, monster.transform.position, Quaternion.identity);
-                timerMonster = 0;
+                timerMonster = -4;
             }
 
             timerMonster += Time.deltaTime;
             if (timerChild >= 5)
             {
                 Instantiate(child, child.transform.position, Quaternion.identity);
-                timerChild = 0;
+                timerChild = -3;
             }
         }
 

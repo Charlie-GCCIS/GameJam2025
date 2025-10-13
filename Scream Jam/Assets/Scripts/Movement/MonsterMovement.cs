@@ -34,13 +34,13 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField]
     StartPosition spawnPosition;
 
-    GameObject playerObject;
+    
 
     int random = -1;
-
     public bool roaming = true;
     public bool onPath = true;
 
+    GameObject playerObject;
     SpawnMonster spawner;
 
     public int Direction { get { return random; } set { random = value; } }
@@ -189,13 +189,12 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // collision with the outside radius around the player
         if (collision.gameObject.tag == "Player")
         {
             roaming = false;
             onPath = false;
-            //Debug.Log("Player");
         }
-        //Debug.Log("Not Player");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -226,6 +225,13 @@ public class MonsterMovement : MonoBehaviour
                 path.x = transform.position.x;
                 break;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // collision with the true player collider
+            //if the player is colliding with the enemy,
+                //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
     }
 
     private void OnDrawGizmos()

@@ -25,7 +25,10 @@ public class Vehicle : MonoBehaviour
 
     SpawnMonster spawner;
 
+    bool attacked;
+
     public int Score { get { return score; } set { score = value; } }
+    public bool PlayerAttacked { get { return attacked; } }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
