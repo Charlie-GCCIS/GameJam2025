@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnMonster : MonoBehaviour
 {
@@ -52,19 +53,22 @@ public class SpawnMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerMonster += Time.deltaTime;
-        timerChild += Time.deltaTime;
-        if (timerMonster >= 2)
+        if (SceneManager.GetActiveScene().name == "GameScene")
         {
-            Instantiate(monster, monster.transform.position, Quaternion.identity);
-            timerMonster = 0;
-        }
+            timerMonster += Time.deltaTime;
+            timerChild += Time.deltaTime;
+            if (timerMonster >= 4)
+            {
+                Instantiate(monster, monster.transform.position, Quaternion.identity);
+                timerMonster = 0;
+            }
 
-        timerMonster += Time.deltaTime;
-        if (timerChild >= 3)
-        {
-            Instantiate(child, child.transform.position, Quaternion.identity);
-            timerChild = 0;
+            timerMonster += Time.deltaTime;
+            if (timerChild >= 5)
+            {
+                Instantiate(child, child.transform.position, Quaternion.identity);
+                timerChild = 0;
+            }
         }
 
     }

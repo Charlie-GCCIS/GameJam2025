@@ -40,7 +40,14 @@ public class ChildrenMovement : MonoBehaviour
         spawnPosition = (StartPosition)random;
 
         //random position throughout the row or column the child is on
-        random = Random.Range(-8, 9);
+        if (spawnPosition == StartPosition.Up || spawnPosition == StartPosition.Down)
+        {
+            random = Random.Range(-7, 8);
+        }
+        else
+        {
+            random = Random.Range(-4, 5);
+        }
 
         switch (spawnPosition)
         {
