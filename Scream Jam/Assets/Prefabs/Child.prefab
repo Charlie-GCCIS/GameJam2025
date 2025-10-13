@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2268592828532213432}
   m_Layer: 0
   m_Name: Child
-  m_TagString: Untagged
+  m_TagString: Trick-o-treaters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
