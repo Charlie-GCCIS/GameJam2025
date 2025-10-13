@@ -42,6 +42,7 @@ public class MonsterMovement : MonoBehaviour
 
     GameObject playerObject;
     SpawnMonster spawner;
+    bool playerAttacked;
 
     public int Direction { get { return random; } set { random = value; } }
 

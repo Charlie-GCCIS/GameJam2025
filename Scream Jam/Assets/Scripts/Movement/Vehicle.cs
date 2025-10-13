@@ -68,6 +68,10 @@ public class Vehicle : MonoBehaviour
         moveDirection = context.ReadValue<Vector2>();
     }
 
+    public void onAttack(InputAction.CallbackContext context)
+    {
+
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
