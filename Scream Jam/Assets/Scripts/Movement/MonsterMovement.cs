@@ -60,11 +60,11 @@ public class MonsterMovement : MonoBehaviour
         //random position throughout the row or column the monster is on
         if (spawnPosition == StartPosition.Up || spawnPosition == StartPosition.Down)
         {
-            random = Random.Range(-7, 8);
+            random = Random.Range(-15, 16);
         }
         else
         {
-            random = Random.Range(-4, 5);
+            random = Random.Range(-8, 9);
         }
 
         switch (spawnPosition)
@@ -72,25 +72,25 @@ public class MonsterMovement : MonoBehaviour
             case StartPosition.Up:
                 moveDirection = new Vector2(0, 1);
                 transform.rotation = Quaternion.Euler(0,0,0);
-                path = new Vector3(random, -10, transform.position.z);
+                path = new Vector3(random, -12, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Down:
                 moveDirection = new Vector2(0, -1);
                 transform.rotation = Quaternion.Euler(0, 0, 180);
-                path = new Vector3(random, 10, transform.position.z);
+                path = new Vector3(random, 12, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Left:
                 moveDirection = new Vector2(1, 0);
                 transform.rotation = Quaternion.Euler(0, 0, 270);
-                path = new Vector3(-10, random, transform.position.z);
+                path = new Vector3(-18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Right:
                 moveDirection = new Vector2(-1, 0);
                 transform.rotation = Quaternion.Euler(0, 0, 90);
-                path = new Vector3(10, random, transform.position.z);
+                path = new Vector3(18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
         }
@@ -233,6 +233,7 @@ public class MonsterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Border")
         {
             moveDirection = -1 * moveDirection;
+            transform.rotation = Quaternion.Euler(0,0,transform.rotation.z + 180);
         }
 
         // collision with the true player collider
