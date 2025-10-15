@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,7 +26,8 @@ public class Vehicle : MonoBehaviour
 
     SpawnMonster spawner;
 
-    bool attacked;
+    bool attacked = false;
+    float timer = 0;
 
     public int Score { get { return score; } set { score = value; } }
     public bool PlayerAttacked { get { return attacked; } }
@@ -61,6 +63,16 @@ public class Vehicle : MonoBehaviour
         {
             SpawnMonster.Instance.PlayerPosition = transform.position;
         }
+
+        if (attacked)
+        {
+            timer += Time.deltaTime;
+            if (timer > 1)
+            {
+                timer = 0;
+                attacked = false;
+            }
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -74,6 +86,12 @@ public class Vehicle : MonoBehaviour
         {
             attacked = true;
         }
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            attacked = false;
+            timer = 0;
+        }
+
     }
     private void OnDrawGizmos()
     {

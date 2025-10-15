@@ -239,12 +239,12 @@ public class MonsterMovement : MonoBehaviour
         // collision with the true player collider
             //if the player is colliding with the enemy,
                 //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
-        if (spawner.PlayerAttacked)
+        if (SpawnMonster.Instance.PlayerAttacked)
         {
             if (collision.gameObject.tag == "Player")
             {
-                Destroy(this);
-                spawner.Score++;
+                SpawnMonster.Instance.Score++;
+                Destroy(gameObject);
             }
         }
 
