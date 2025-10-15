@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f950931cd0a2a9848833aaa7fdc6294c
+guid: ee9b69fbe3bf1574da21ee6db0ded07e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8858325857178632355
-    second: Green House_0
+      213: -3098958394270079992
+    second: Sidewalk Tile_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 11
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Green House_0
+      name: Sidewalk Tile_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 80
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5fb53af097e01580800000000000000
-      internalID: -8858325857178632355
+      spriteID: 80421d762c94ef4d0800000000000000
+      internalID: -3098958394270079992
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Green House_0: -8858325857178632355
+      Sidewalk Tile_0: -3098958394270079992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
