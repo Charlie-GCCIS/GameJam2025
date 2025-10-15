@@ -230,6 +230,11 @@ public class MonsterMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Border")
+        {
+            moveDirection = -1 * moveDirection;
+        }
+
         // collision with the true player collider
             //if the player is colliding with the enemy,
                 //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
