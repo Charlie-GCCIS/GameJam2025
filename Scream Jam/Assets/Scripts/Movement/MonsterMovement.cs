@@ -60,11 +60,11 @@ public class MonsterMovement : MonoBehaviour
         //random position throughout the row or column the monster is on
         if (spawnPosition == StartPosition.Up || spawnPosition == StartPosition.Down)
         {
-            random = Random.Range(-15, 16);
+            random = Random.Range(-3, 4);
         }
         else
         {
-            random = Random.Range(-8, 9);
+            random = Random.Range(-3, 4);
         }
 
         switch (spawnPosition)
@@ -239,6 +239,15 @@ public class MonsterMovement : MonoBehaviour
         // collision with the true player collider
             //if the player is colliding with the enemy,
                 //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
+        if (spawner.PlayerAttacked)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                Destroy(this);
+                spawner.Score++;
+            }
+        }
+
     }
 
     private void OnDrawGizmos()

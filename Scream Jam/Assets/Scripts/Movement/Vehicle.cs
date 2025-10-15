@@ -70,7 +70,10 @@ public class Vehicle : MonoBehaviour
 
     public void onAttack(InputAction.CallbackContext context)
     {
-
+        if (context.phase == InputActionPhase.Performed)
+        {
+            attacked = true;
+        }
     }
     private void OnDrawGizmos()
     {
@@ -79,5 +82,12 @@ public class Vehicle : MonoBehaviour
 
         Gizmos.color = Color.magenta;
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + rb.linearVelocity);
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" && attacked == true)
+        {
+            attacked = false;
+        }
     }
 }

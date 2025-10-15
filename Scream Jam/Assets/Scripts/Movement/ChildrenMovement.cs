@@ -42,11 +42,11 @@ public class ChildrenMovement : MonoBehaviour
         //random position throughout the row or column the child is on
         if (spawnPosition == StartPosition.Up || spawnPosition == StartPosition.Down)
         {
-            random = Random.Range(-7, 8);
+            random = Random.Range(-3, 4);
         }
         else
         {
-            random = Random.Range(-4, 5);
+            random = Random.Range(-3, 4);
         }
 
         switch (spawnPosition)
@@ -54,22 +54,22 @@ public class ChildrenMovement : MonoBehaviour
             case StartPosition.Up:
                 moveDirection = new Vector2(0, 1);
                 transform.rotation = Quaternion.Euler(0, 0, 0);
-                rb.transform.position = new Vector3(random, -10, transform.position.z);
+                rb.transform.position = new Vector3(random, -12, transform.position.z);
                 break;
             case StartPosition.Down:
                 moveDirection = new Vector2(0, -1);
                 transform.rotation = Quaternion.Euler(0, 0, 180);
-                rb.transform.position = new Vector3(random, 10, transform.position.z);
+                rb.transform.position = new Vector3(random, 12, transform.position.z);
                 break;
             case StartPosition.Left:
                 moveDirection = new Vector2(1, 0);
                 transform.rotation = Quaternion.Euler(0, 0, 270);
-                rb.transform.position = new Vector3(-10, random, transform.position.z);
+                rb.transform.position = new Vector3(-18, random, transform.position.z);
                 break;
             case StartPosition.Right:
                 moveDirection = new Vector2(-1, 0);
                 transform.rotation = Quaternion.Euler(0, 0, 90);
-                rb.transform.position = new Vector3(10, random, transform.position.z);
+                rb.transform.position = new Vector3(18, random, transform.position.z);
                 break;
         }
         Debug.Log(moveDirection + " " + random + " child");

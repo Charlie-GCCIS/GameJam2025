@@ -1,8 +1,14 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SpawnMonster : MonoBehaviour
 {
+
+    int score = 0;
+
+    [SerializeField]
+    TMP_Text scoreText;
 
     [SerializeField]
     GameObject monster;
@@ -15,7 +21,7 @@ public class SpawnMonster : MonoBehaviour
     int currentRandom;
 
     [SerializeField]
-    GameObject playerObject;
+    Vehicle playerObject;
 
     public int CurrentRandom { get { return currentRandom; } }
 
@@ -24,7 +30,10 @@ public class SpawnMonster : MonoBehaviour
     public static SpawnMonster Instance { get; private set; }
 
     // A public property to store the player's position.
-    public Vector3 PlayerPosition { get; set; }
+    public Vector3 PlayerPosition { get { return playerObject.transform.position; } }
+    public bool PlayerAttacked { get { return playerObject.PlayerAttacked; } }
+
+    public int Score { get { return Score; } set { score = value; } }
 
     // Ensures only one instance of the GameManager exists.
     private void Awake()
@@ -71,6 +80,7 @@ public class SpawnMonster : MonoBehaviour
             }
         }
 
+        scoreText.text = $"Score: {score}";
     }
 
     public int GetDifferentRandom()
