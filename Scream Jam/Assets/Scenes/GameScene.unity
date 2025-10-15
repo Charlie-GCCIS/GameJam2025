@@ -255,8 +255,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 1141f437174f7764a99819b10c224f9f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -6086315540589190387, guid: f220bd6a55d03814aa45ad1c8d9cb5f2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 1141f437174f7764a99819b10c224f9f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -6086315540589190387, guid: f220bd6a55d03814aa45ad1c8d9cb5f2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -557,8 +557,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 1141f437174f7764a99819b10c224f9f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -6086315540589190387, guid: f220bd6a55d03814aa45ad1c8d9cb5f2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -599,8 +599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerhealth: 100
   maxHealh: 4
-  emptyHeart: {fileID: -2413806693520163455, guid: 1141f437174f7764a99819b10c224f9f, type: 3}
-  fulHeart: {fileID: -2413806693520163455, guid: d87e483af1cf5f640b8ca3d0a9971726, type: 3}
+  emptyHeart: {fileID: -6086315540589190387, guid: f220bd6a55d03814aa45ad1c8d9cb5f2, type: 3}
+  fulHeart: {fileID: 4748693934861173506, guid: 5a6ec62f1d66dbd4a97e93861f8939ef, type: 3}
   hearts:
   - {fileID: 1252005992}
   - {fileID: 1787579263}
@@ -940,8 +940,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2413806693520163455, guid: 1141f437174f7764a99819b10c224f9f, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -6086315540589190387, guid: f220bd6a55d03814aa45ad1c8d9cb5f2, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
