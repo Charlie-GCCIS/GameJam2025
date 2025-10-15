@@ -8,9 +8,6 @@ public class SpawnMonster : MonoBehaviour
     int score = 0;
 
     [SerializeField]
-    TMP_Text scoreText;
-
-    [SerializeField]
     GameObject monster;
 
     [SerializeField]
@@ -23,6 +20,9 @@ public class SpawnMonster : MonoBehaviour
     [SerializeField]
     Vehicle playerObject;
 
+    [SerializeField]
+    TMP_Text scoreText;
+
     public int CurrentRandom { get { return currentRandom; } }
 
 
@@ -30,7 +30,7 @@ public class SpawnMonster : MonoBehaviour
     public static SpawnMonster Instance { get; private set; }
 
     // A public property to store the player's position.
-    public Vector3 PlayerPosition { get { return playerObject.transform.position; } }
+    public Vector3 PlayerPosition { get { return playerObject.transform.position; } set { playerObject.transform.position = value; } }
     public bool PlayerAttacked { get { return playerObject.PlayerAttacked; } }
 
     public int Score { get { return Score; } set { score = value; } }
