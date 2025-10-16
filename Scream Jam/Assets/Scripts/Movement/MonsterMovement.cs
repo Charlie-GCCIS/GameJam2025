@@ -194,7 +194,7 @@ public class MonsterMovement : MonoBehaviour
                         path.x = transform.position.x;
                     }
                     break;
-            }
+            }            
         }
         else
         {
