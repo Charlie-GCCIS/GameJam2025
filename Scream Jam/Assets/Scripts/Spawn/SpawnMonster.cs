@@ -17,8 +17,7 @@ public class SpawnMonster : MonoBehaviour
     float timerChild;
     int currentRandom;
 
-    [SerializeField]
-    Vehicle playerObject;
+    Vehicle player;
 
     [SerializeField]
     TMP_Text scoreText;
@@ -30,8 +29,11 @@ public class SpawnMonster : MonoBehaviour
     public static SpawnMonster Instance { get; private set; }
 
     // A public property to store the player's position.
-    public Vector3 PlayerPosition { get { return playerObject.transform.position; } set { playerObject.transform.position = value; } }
-    public bool PlayerAttacked { get { return playerObject.PlayerAttacked; } }
+    public Vector3 PlayerPosition { 
+        get 
+        { return Vehicle.Instance.transform.position; } 
+        set { Vehicle.Instance.transform.position = value; } }
+    public bool PlayerAttacked { get { return Vehicle.Instance.PlayerAttacked; } }
 
     public int Score { get { return score; } set { score = value; } }
 

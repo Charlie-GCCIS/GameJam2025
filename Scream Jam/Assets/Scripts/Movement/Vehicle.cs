@@ -29,6 +29,8 @@ public class Vehicle : MonoBehaviour
     bool attacked = false;
     float timer = 0;
 
+    public static Vehicle Instance { get; private set; }
+
     public int Score { get { return score; } set { score = value; } }
     public bool PlayerAttacked { get { return attacked; } }
 
@@ -42,6 +44,20 @@ public class Vehicle : MonoBehaviour
     Sprite faceUp;
 
     SpriteRenderer spriteRender;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            // Prevents the manager from being destroyed when loading new scenes.
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
