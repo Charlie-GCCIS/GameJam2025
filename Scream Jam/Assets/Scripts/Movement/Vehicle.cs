@@ -82,7 +82,8 @@ public class Vehicle : MonoBehaviour
         if (attacked)
         {
             timer += Time.deltaTime;
-            if (timer > 1)
+            Debug.Log(timer);
+            if (timer > 0.1)
             {
                 timer = 0;
                 attacked = false;

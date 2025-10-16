@@ -139,6 +139,7 @@ MonoBehaviour:
   spawnPosition: 0
   roaming: 1
   onPath: 1
+  collided: 0
 --- !u!70 &-7055433451705022583
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

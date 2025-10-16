@@ -33,7 +33,7 @@ public class SpawnMonster : MonoBehaviour
     public Vector3 PlayerPosition { get { return playerObject.transform.position; } set { playerObject.transform.position = value; } }
     public bool PlayerAttacked { get { return playerObject.PlayerAttacked; } }
 
-    public int Score { get { return Score; } set { score = value; } }
+    public int Score { get { return score; } set { score = value; } }
 
     // Ensures only one instance of the GameManager exists.
     private void Awake()
