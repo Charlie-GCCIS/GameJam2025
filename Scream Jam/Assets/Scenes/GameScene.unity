@@ -1306,7 +1306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &751030991
 Transform:
   m_ObjectHideFlags: 0
@@ -11169,6 +11169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 712633602426041980, guid: 384edb1220940b94580fd74293c20f71, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2112669842291254423, guid: 384edb1220940b94580fd74293c20f71, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
@@ -11209,6 +11213,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2505385049120004063, guid: 384edb1220940b94580fd74293c20f71, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 735395998081461694, guid: ee0f67c6c54f7464597f2ab659a8b733, type: 3}
     - target: {fileID: 2577718339515867872, guid: 384edb1220940b94580fd74293c20f71, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 1
