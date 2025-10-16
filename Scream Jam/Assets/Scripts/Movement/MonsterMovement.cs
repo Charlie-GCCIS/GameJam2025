@@ -31,10 +31,12 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField]
     Vector2 position;
 
+    
     [SerializeField]
     StartPosition spawnPosition;
 
     
+
 
     int random = -1;
     public bool roaming = true;
@@ -43,6 +45,8 @@ public class MonsterMovement : MonoBehaviour
     GameObject playerObject;
     SpawnMonster spawner;
     bool playerAttacked;
+    public bool collided = false;
+    public Collision2D collisionObject;
 
     public int Direction { get { return random; } set { random = value; } }
 
@@ -97,6 +101,13 @@ public class MonsterMovement : MonoBehaviour
         //Debug.Log(moveDirection + " " + random);
     }
 
+    private void Update()
+    {
+        if (collisionObject != null)
+        {
+            DestroyItself(collisionObject);
+        }
+    }
     private void FixedUpdate()
     {
 
@@ -237,17 +248,30 @@ public class MonsterMovement : MonoBehaviour
         }
 
         // collision with the true player collider
-            //if the player is colliding with the enemy,
-                //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
-        if (SpawnMonster.Instance.PlayerAttacked)
+        //if the player is colliding with the enemy,
+        //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
+        collided = true;
+        collisionObject = collision;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collided = false;
+        collisionObject = null;
+    }
+
+    private void DestroyItself(Collision2D collision)
+    {
+        if (collided)
         {
-            if (collision.gameObject.tag == "Player")
+            if (SpawnMonster.Instance.PlayerAttacked)
             {
-                SpawnMonster.Instance.Score++;
-                Destroy(gameObject);
+                if (collision.gameObject.tag == "Player")
+                {
+                    SpawnMonster.Instance.Score++;
+                    Destroy(gameObject);
+                }
             }
         }
-
     }
 
     private void OnDrawGizmos()
