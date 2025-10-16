@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 6e78b409808703e4fa92d0af9c567fd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8374701798733180152
+    second: Monster Slayer_0
+  - first:
+      213: -556658938313710893
+    second: Monster Slayer_1
+  - first:
+      213: -2285933135251601632
+    second: Monster Slayer_2
+  - first:
+      213: 8501876497960600683
+    second: Monster Slayer_3
+  - first:
+      213: -7593003378534639230
+    second: Monster Slayer_4
+  - first:
+      213: -2504728241170179099
+    second: Monster Slayer_5
+  - first:
+      213: -215715372961860071
+    second: Monster Slayer_6
+  - first:
+      213: -1111288863760111188
+    second: Monster Slayer_7
+  - first:
+      213: 9007005553682021920
+    second: Monster Slayer_8
+  - first:
+      213: -5532207274296557446
+    second: Monster Slayer_9
+  - first:
+      213: 8823103844913132392
+    second: Monster Slayer_10
+  - first:
+      213: -7777227503063423903
+    second: Monster Slayer_11
+  - first:
+      213: 6937809928760669943
+    second: Monster Slayer_12
+  - first:
+      213: 2489260340089892718
+    second: Monster Slayer_13
+  - first:
+      213: -9043748763356302180
+    second: Monster Slayer_14
+  - first:
+      213: 5927922985353754827
+    second: Monster Slayer_15
+  - first:
+      213: 3358472449164136681
+    second: Monster Slayer_16
+  - first:
+      213: -6421147245411267349
+    second: Monster Slayer_17
+  - first:
+      213: 4768815638246395901
+    second: Monster Slayer_18
+  - first:
+      213: -4413507944427643513
+    second: Monster Slayer_19
+  - first:
+      213: 5592357427492359262
+    second: Monster Slayer_20
+  - first:
+      213: -9221168550597125158
+    second: Monster Slayer_21
+  - first:
+      213: -4587703082436716615
+    second: Monster Slayer_22
+  - first:
+      213: 4501319614820462042
+    second: Monster Slayer_23
+  - first:
+      213: 8222536160835229454
+    second: Monster Slayer_24
+  - first:
+      213: 3759264307093205863
+    second: Monster Slayer_25
+  - first:
+      213: -2995088086381395969
+    second: Monster Slayer_26
+  - first:
+      213: 9211753233163925067
+    second: Monster Slayer_27
+  - first:
+      213: 3207688294826529090
+    second: Monster Slayer_28
+  - first:
+      213: 1984768908150056720
+    second: Monster Slayer_29
+  - first:
+      213: -5321358897106916808
+    second: Monster Slayer_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monster Slayer_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 448
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8031faac51517cb80800000000000000
+      internalID: -8374701798733180152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 441
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d2e3c815a95648f0800000000000000
+      internalID: -556658938313710893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 448
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0278805ccebb640e0800000000000000
+      internalID: -2285933135251601632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_3
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 401
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b640f2941abbcf570800000000000000
+      internalID: 8501876497960600683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 394
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2891a1c18ab30a690800000000000000
+      internalID: -7593003378534639230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 398
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb992e6fea6d3dd0800000000000000
+      internalID: -2504728241170179099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 391
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916740ed200a10df0800000000000000
+      internalID: -215715372961860071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 350
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca92bb09aa8e390f0800000000000000
+      internalID: -1111288863760111188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 346
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02eff2574df4ffc70800000000000000
+      internalID: 9007005553682021920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 353
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70c8bf7bc6a933b0800000000000000
+      internalID: -5532207274296557446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 343
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8633e6c3336f17a70800000000000000
+      internalID: 8823103844913132392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_11
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 311
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164a18e9accb11490800000000000000
+      internalID: -7777227503063423903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 290
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f635f24f5d084060800000000000000
+      internalID: 6937809928760669943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 263
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fa6843711ab8220800000000000000
+      internalID: 2489260340089892718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 243
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94f4426a662e7280800000000000000
+      internalID: -9043748763356302180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 218
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc832e53c86344250800000000000000
+      internalID: 5927922985353754827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 199
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e05d5806e0bb9e20800000000000000
+      internalID: 3358472449164136681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_17
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 207
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec88cad99083e6a0800000000000000
+      internalID: -6421147245411267349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_18
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 207
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff01058e8c3e2240800000000000000
+      internalID: 4768815638246395901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 170
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d960788e110c2c0800000000000000
+      internalID: -4413507944427643513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 150
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5c03b2637b0c9d40800000000000000
+      internalID: 5592357427492359262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_21
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 159
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb97af1f04d70080800000000000000
+      internalID: -9221168550597125158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_22
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 159
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7156c6a543550c0800000000000000
+      internalID: -4587703082436716615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_23
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 122
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add2fd53756e77e30800000000000000
+      internalID: 4501319614820462042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_24
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07536bc2115c1270800000000000000
+      internalID: 8222536160835229454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_25
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 111
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763781948f69b2430800000000000000
+      internalID: 3759264307093205863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_26
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 111
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff7b3c014f4f66d0800000000000000
+      internalID: -2995088086381395969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_27
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 71
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46ba4572c8b6df70800000000000000
+      internalID: 9211753233163925067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_28
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 50
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2415053528ff38c20800000000000000
+      internalID: 3207688294826529090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_29
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 23
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01726836ec05b8b10800000000000000
+      internalID: 1984768908150056720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster Slayer_30
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 3
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ae39fd64cb626b0800000000000000
+      internalID: -5321358897106916808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Monster Slayer_0: -8374701798733180152
+      Monster Slayer_1: -556658938313710893
+      Monster Slayer_10: 8823103844913132392
+      Monster Slayer_11: -7777227503063423903
+      Monster Slayer_12: 6937809928760669943
+      Monster Slayer_13: 2489260340089892718
+      Monster Slayer_14: -9043748763356302180
+      Monster Slayer_15: 5927922985353754827
+      Monster Slayer_16: 3358472449164136681
+      Monster Slayer_17: -6421147245411267349
+      Monster Slayer_18: 4768815638246395901
+      Monster Slayer_19: -4413507944427643513
+      Monster Slayer_2: -2285933135251601632
+      Monster Slayer_20: 5592357427492359262
+      Monster Slayer_21: -9221168550597125158
+      Monster Slayer_22: -4587703082436716615
+      Monster Slayer_23: 4501319614820462042
+      Monster Slayer_24: 8222536160835229454
+      Monster Slayer_25: 3759264307093205863
+      Monster Slayer_26: -2995088086381395969
+      Monster Slayer_27: 9211753233163925067
+      Monster Slayer_28: 3207688294826529090
+      Monster Slayer_29: 1984768908150056720
+      Monster Slayer_3: 8501876497960600683
+      Monster Slayer_30: -5321358897106916808
+      Monster Slayer_4: -7593003378534639230
+      Monster Slayer_5: -2504728241170179099
+      Monster Slayer_6: -215715372961860071
+      Monster Slayer_7: -1111288863760111188
+      Monster Slayer_8: 9007005553682021920
+      Monster Slayer_9: -5532207274296557446
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

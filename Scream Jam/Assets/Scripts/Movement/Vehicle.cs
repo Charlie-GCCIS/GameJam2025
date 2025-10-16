@@ -32,6 +32,17 @@ public class Vehicle : MonoBehaviour
     public int Score { get { return score; } set { score = value; } }
     public bool PlayerAttacked { get { return attacked; } }
 
+    [SerializeField]
+    Sprite faceLeft;
+    [SerializeField]
+    Sprite faceRight;
+    [SerializeField]
+    Sprite faceDown;
+    [SerializeField]
+    Sprite faceUp;
+
+    SpriteRenderer spriteRender;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +54,10 @@ public class Vehicle : MonoBehaviour
         screenBounds.x = screenBounds.y * Camera.main.aspect;
 
         score = 0;
+
+        spriteRender = GetComponent<SpriteRenderer>();
+
+        
     }
 
 
@@ -78,6 +93,24 @@ public class Vehicle : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+
+        if(moveDirection == Vector2.left)
+        {
+            spriteRender.sprite = faceLeft;
+        }
+        if (moveDirection == Vector2.right)
+        {
+            spriteRender.sprite = faceRight;
+        }
+        if (moveDirection == Vector2.up)
+        {
+            spriteRender.sprite = faceUp;
+        }
+        if (moveDirection == Vector2.down)
+        {
+            spriteRender.sprite = faceDown;
+        }
+
     }
 
     public void onAttack(InputAction.CallbackContext context)
