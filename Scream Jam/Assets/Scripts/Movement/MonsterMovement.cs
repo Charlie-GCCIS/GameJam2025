@@ -179,25 +179,7 @@ public class MonsterMovement : MonoBehaviour
                         path.x = transform.position.x;
                     }
                     break;
-            }
-
-            if(transform.position == Vector3.left)
-            {
-
-            }
-            if(transform.position == Vector3.right)
-            {
-
-            }
-            if(transform.position == Vector3.up)
-            {
-
-            }
-            if(transform.position == Vector3.down)
-            {
-
-            }
-            
+            }            
         }
         else
         {
