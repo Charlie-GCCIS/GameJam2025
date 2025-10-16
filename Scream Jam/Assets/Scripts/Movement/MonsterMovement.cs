@@ -18,7 +18,7 @@ public class MonsterMovement : MonoBehaviour
     float speed = 0.5f;
 
     [SerializeField]
-    Vector2 velocity;
+    public Vector2 velocity;
 
     public Vector3 path;
 
@@ -35,7 +35,20 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField]
     StartPosition spawnPosition;
 
-    
+    [SerializeField]
+    Sprite frankLeft;
+    [SerializeField]
+    Sprite frankRight;
+    [SerializeField]
+    Sprite frankUp;
+    [SerializeField]
+    Sprite frankDown;
+
+
+
+    SpriteRenderer spriteRender;
+
+
 
 
     int random = -1;
@@ -86,18 +99,20 @@ public class MonsterMovement : MonoBehaviour
                 break;
             case StartPosition.Left:
                 moveDirection = new Vector2(1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 90);
                 path = new Vector3(-18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Right:
                 moveDirection = new Vector2(-1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 270);
                 path = new Vector3(18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
         }
         //Debug.Log(moveDirection + " " + random);
+
+        spriteRender = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -136,7 +151,7 @@ public class MonsterMovement : MonoBehaviour
                 }
                 float targetSpin = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
                 Quaternion turnRotation = Quaternion.Euler(0, 0, targetSpin - 90 + transform.rotation.z);
-                transform.rotation = turnRotation;
+                //transform.rotation = turnRotation;
 
                 //move towards opposite wall
                 Vector2 targetDirection = (Vector2)targetPos.normalized;
@@ -180,24 +195,6 @@ public class MonsterMovement : MonoBehaviour
                     }
                     break;
             }
-
-            if(transform.position == Vector3.left)
-            {
-
-            }
-            if(transform.position == Vector3.right)
-            {
-
-            }
-            if(transform.position == Vector3.up)
-            {
-
-            }
-            if(transform.position == Vector3.down)
-            {
-
-            }
-            
         }
         else
         {
@@ -216,6 +213,31 @@ public class MonsterMovement : MonoBehaviour
 
             //Debug.Log(SpawnMonster.Instance.PlayerPosition);
         }
+
+        if(moveDirection.y != 0)
+        {
+            if(moveDirection.y < 0)
+            {
+                spriteRender.sprite = frankDown;
+            }
+            else
+            {
+                spriteRender.sprite = frankUp;
+            }
+        }
+        else
+        {
+            if (moveDirection.x < 0)
+            {
+                spriteRender.sprite = frankLeft;
+            }
+            else
+            {
+                spriteRender.sprite = frankRight;
+                
+            }
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -248,11 +270,11 @@ public class MonsterMovement : MonoBehaviour
                 path.y = transform.position.y;
                 break;
             case StartPosition.Left:
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 90);
                 path.x = transform.position.x;
                 break;
             case StartPosition.Right:
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 270);
                 path.x = transform.position.x;
                 break;
         }
@@ -263,7 +285,7 @@ public class MonsterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Border")
         {
             moveDirection = -1 * moveDirection;
-            transform.rotation = Quaternion.Euler(0,0,transform.rotation.z + 180);
+            //transform.rotation = Quaternion.Euler(0,0,transform.rotation.z + 180);
         }
 
         // collision with the true player collider

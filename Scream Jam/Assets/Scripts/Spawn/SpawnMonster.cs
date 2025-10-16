@@ -80,7 +80,7 @@ public class SpawnMonster : MonoBehaviour
             }
         }
 
-        scoreText.text = $"Score: {score}";
+        //scoreText.text = $"Score: {score}";
     }
 
     public int GetDifferentRandom()

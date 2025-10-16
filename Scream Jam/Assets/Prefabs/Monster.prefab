@@ -80,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4412668980392848953, guid: 1df7c128441b7e2478ca3b51fbd455bb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -137,8 +137,13 @@ MonoBehaviour:
   rb: {fileID: -4699108001272933092}
   position: {x: 0, y: 0}
   spawnPosition: 0
+  frankLeft: {fileID: -4412668980392848953, guid: 1df7c128441b7e2478ca3b51fbd455bb, type: 3}
+  frankRight: {fileID: -8954003853119010748, guid: b99277357724b9b4d8113affee42ee0e, type: 3}
+  frankUp: {fileID: 7512766414663736628, guid: 72e4a06690bf0cf4ca95858490fb1f34, type: 3}
+  frankDown: {fileID: -2284451436559579582, guid: 6b17f265e6acef14894d58c81a2a801a, type: 3}
   roaming: 1
   onPath: 1
+  playerAttacked: 0
   collided: 0
 --- !u!70 &-7055433451705022583
 CapsuleCollider2D:
