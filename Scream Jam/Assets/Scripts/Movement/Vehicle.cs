@@ -82,8 +82,7 @@ public class Vehicle : MonoBehaviour
         if (attacked)
         {
             timer += Time.deltaTime;
-            Debug.Log(timer);
-            if (timer > 0.1)
+            if (timer > 0.5)
             {
                 timer = 0;
                 attacked = false;
@@ -118,6 +117,7 @@ public class Vehicle : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
+            Debug.Log("Attacked: " + attacked);
             attacked = true;
         }
         if (context.phase == InputActionPhase.Canceled)
@@ -134,12 +134,11 @@ public class Vehicle : MonoBehaviour
 
         Gizmos.color = Color.magenta;
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + rb.linearVelocity);
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy" && attacked == true)
+
+        if (attacked)
         {
-            attacked = false;
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, new Vector2(10,10));
         }
     }
 }

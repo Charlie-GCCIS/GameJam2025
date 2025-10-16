@@ -44,9 +44,8 @@ public class MonsterMovement : MonoBehaviour
 
     GameObject playerObject;
     SpawnMonster spawner;
-    bool playerAttacked;
+    public bool playerAttacked;
     public bool collided = false;
-    public Collision2D collisionObject;
 
     public int Direction { get { return random; } set { random = value; } }
 
@@ -103,11 +102,15 @@ public class MonsterMovement : MonoBehaviour
 
     private void Update()
     {
-        if (collisionObject != null)
+        playerAttacked = SpawnMonster.Instance.PlayerAttacked;
+        if (SpawnMonster.Instance.PlayerAttacked && collided)
         {
-            DestroyItself(collisionObject);
+            Debug.Log("Destroy yourself!");
+            SpawnMonster.Instance.Score++;
+            Destroy(gameObject);
         }
     }
+
     private void FixedUpdate()
     {
 
@@ -250,27 +253,17 @@ public class MonsterMovement : MonoBehaviour
         // collision with the true player collider
         //if the player is colliding with the enemy,
         //check for the player attacking (use the spawner manager, which takes in the playerAttacking property for this step)
-        collided = true;
-        collisionObject = collision;
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        collided = false;
-        collisionObject = null;
+        if (collision.gameObject.tag == "Player")
+        {
+            collided = true;
+        }      
     }
 
-    private void DestroyItself(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collided)
+        if (collision.gameObject.tag == "Player")
         {
-            if (SpawnMonster.Instance.PlayerAttacked)
-            {
-                if (collision.gameObject.tag == "Player")
-                {
-                    SpawnMonster.Instance.Score++;
-                    Destroy(gameObject);
-                }
-            }
+            collided = false;
         }
     }
 
