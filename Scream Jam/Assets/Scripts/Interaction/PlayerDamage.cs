@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     [SerializeField]
-    float playerhealth = 100;
+    float playerHealth = 100;
     [SerializeField]
     int maxHealh = 100;
 
@@ -17,7 +17,7 @@ public class PlayerDamage : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        playerHealth = 100;
         
     }
 
@@ -26,7 +26,7 @@ public class PlayerDamage : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i <playerhealth)
+            if(i <playerHealth)
             {
                 hearts[i].sprite = fulHeart;
             }
@@ -46,21 +46,21 @@ public class PlayerDamage : MonoBehaviour
             }
         }
 
-        if(playerhealth < 75)
+        if(playerHealth < 75)
         {
             hearts[3].sprite = emptyHeart;
         }
-        if (playerhealth < 50)
+        if (playerHealth < 50)
         {
             hearts[2].sprite = emptyHeart;
         }
-        if (playerhealth < 25)
+        if (playerHealth < 25)
         {
             hearts[1].sprite = emptyHeart;
         }
 
 
-        if(playerhealth <=0)
+        if(playerHealth <=0)
         {
             SceneManager.LoadScene("DeathScreen");
             //SceneManager.UnloadScene("GameScene");
@@ -71,7 +71,7 @@ public class PlayerDamage : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
-            playerhealth --;
+            playerHealth --;
 
         }
     }
