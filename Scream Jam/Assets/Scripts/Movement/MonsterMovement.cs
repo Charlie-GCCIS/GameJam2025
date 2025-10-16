@@ -105,7 +105,6 @@ public class MonsterMovement : MonoBehaviour
         playerAttacked = SpawnMonster.Instance.PlayerAttacked;
         if (SpawnMonster.Instance.PlayerAttacked && collided)
         {
-            Debug.Log("Destroy yourself!");
             SpawnMonster.Instance.Score++;
             Destroy(gameObject);
         }
