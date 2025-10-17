@@ -63,7 +63,7 @@ public class PlayerDamage : MonoBehaviour
         if(playerHealth <=0)
         {
             SceneManager.LoadScene("DeathScreen");
-            //SceneManager.UnloadScene("GameScene");
+            
         }
     }
 

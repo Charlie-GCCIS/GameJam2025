@@ -28,6 +28,19 @@ public class ChildrenMovement : MonoBehaviour
 
     public int Direction { get { return random; } set { random = value; } }
 
+
+    [SerializeField]
+    Sprite frankDown;
+    [SerializeField]
+    Sprite frankLeft;
+    [SerializeField]
+    Sprite frankRight;
+    [SerializeField]
+    Sprite frankUp;
+
+    SpriteRenderer spriteRender;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -73,6 +86,8 @@ public class ChildrenMovement : MonoBehaviour
                 break;
         }
         Debug.Log(moveDirection + " " + random + " child");
+
+        spriteRender = gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -81,9 +96,36 @@ public class ChildrenMovement : MonoBehaviour
         velocity = moveDirection * speed * Time.fixedDeltaTime;
         Vector2 newPos = (Vector2)transform.position + velocity;
         rb.MovePosition(newPos);
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+        if (moveDirection.y != 0)
+        {
+            if (moveDirection.y < 0)
+            {
+                spriteRender.sprite = frankDown;
+            }
+            else
+            {
+                spriteRender.sprite = frankUp;
+            }
+        }
+        else
+        {
+            if (moveDirection.x < 0)
+            {
+                spriteRender.sprite = frankLeft;
+            }
+            else
+            {
+                spriteRender.sprite = frankRight;
+
+            }
+        }
+
+    }
+        
+
+
+private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.tag == "Player")
         //{
