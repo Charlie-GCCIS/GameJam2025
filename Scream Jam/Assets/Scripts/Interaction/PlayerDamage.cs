@@ -104,26 +104,6 @@ public class PlayerDamage : MonoBehaviour
                 //SceneManager.UnloadScene("GameScene");
             }
         }
-
-        if(playerHealth < 75)
-        {
-            hearts[3].sprite = emptyHeart;
-        }
-        if (playerHealth < 50)
-        {
-            hearts[2].sprite = emptyHeart;
-        }
-        if (playerHealth < 25)
-        {
-            hearts[1].sprite = emptyHeart;
-        }
-
-
-        if(playerHealth <=0)
-        {
-            SceneManager.LoadScene("DeathScreen");
-            
-        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
