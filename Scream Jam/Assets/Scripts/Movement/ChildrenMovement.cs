@@ -71,21 +71,20 @@ public class ChildrenMovement : MonoBehaviour
                 break;
             case StartPosition.Down:
                 moveDirection = new Vector2(0, -1);
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 rb.transform.position = new Vector3(random, 12, transform.position.z);
                 break;
             case StartPosition.Left:
                 moveDirection = new Vector2(1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 rb.transform.position = new Vector3(-18, random, transform.position.z);
                 break;
             case StartPosition.Right:
                 moveDirection = new Vector2(-1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 rb.transform.position = new Vector3(18, random, transform.position.z);
                 break;
         }
-        Debug.Log(moveDirection + " " + random + " child");
 
         spriteRender = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -122,38 +121,22 @@ public class ChildrenMovement : MonoBehaviour
         }
 
     }
-        
-
-
-private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //if (collision.gameObject.tag == "Player")
-        //{
-        //    //Debug.Log("Player");
-        //}
-        //Debug.Log("Not Player");
-    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //if (collision.gameObject.tag == "Player")
-        //{
-        //    //Debug.Log("Player");
-        //}
-        //Debug.Log("Not Player");
         switch (spawnPosition)
         {
             case StartPosition.Up:
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 break;
             case StartPosition.Down:
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 break;
             case StartPosition.Left:
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 break;
             case StartPosition.Right:
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 break;
         }
     }

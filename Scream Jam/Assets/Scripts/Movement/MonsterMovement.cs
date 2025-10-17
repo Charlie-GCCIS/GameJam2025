@@ -44,12 +44,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField]
     Sprite frankDown;
 
-
-
     SpriteRenderer spriteRender;
-
-
-
 
     int random = -1;
     public bool roaming = true;
@@ -93,25 +88,23 @@ public class MonsterMovement : MonoBehaviour
                 break;
             case StartPosition.Down:
                 moveDirection = new Vector2(0, -1);
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path = new Vector3(random, 12, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Left:
                 moveDirection = new Vector2(1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path = new Vector3(-18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
             case StartPosition.Right:
                 moveDirection = new Vector2(-1, 0);
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path = new Vector3(18, random, transform.position.z);
                 rb.transform.position = path;
                 break;
         }
-        //Debug.Log(moveDirection + " " + random);
-
         spriteRender = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -151,7 +144,6 @@ public class MonsterMovement : MonoBehaviour
                 }
                 float targetSpin = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
                 Quaternion turnRotation = Quaternion.Euler(0, 0, targetSpin - 90 + transform.rotation.z);
-                //transform.rotation = turnRotation;
 
                 //move towards opposite wall
                 Vector2 targetDirection = (Vector2)targetPos.normalized;
@@ -174,7 +166,7 @@ public class MonsterMovement : MonoBehaviour
                     if ((path.x - transform.position.x) <= 0.25f)
                     {
                         onPath = true;
-                        transform.rotation = Quaternion.Euler(0, 0, 180);
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
                         path.y = transform.position.y;
                     }
                     break;
@@ -182,7 +174,7 @@ public class MonsterMovement : MonoBehaviour
                     if ((path.y - transform.position.y) <= 0.25f)
                     {
                         onPath = true;
-                        transform.rotation = Quaternion.Euler(0, 0, 270);
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
                         path.x = transform.position.x;
                     }
                     break;
@@ -190,7 +182,7 @@ public class MonsterMovement : MonoBehaviour
                     if ((path.y - transform.position.y) <= 0.25f)
                     {
                         onPath = true;
-                        transform.rotation = Quaternion.Euler(0, 0, 90);
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
                         path.x = transform.position.x;
                     }
                     break;
@@ -202,16 +194,12 @@ public class MonsterMovement : MonoBehaviour
             Vector3 targetPos = SpawnMonster.Instance.PlayerPosition - transform.position;
             float targetSpin = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
             Quaternion turnRotation = Quaternion.Euler(0, 0, targetSpin - 90 + transform.rotation.z);
-            transform.rotation = turnRotation;
 
             //move towards player
             Vector2 targetDirection = (Vector2)targetPos.normalized;
             velocity = targetDirection * speed * Time.fixedDeltaTime;
             Vector2 newPos = (Vector2)transform.position + velocity;
             rb.MovePosition(newPos);
-
-
-            //Debug.Log(SpawnMonster.Instance.PlayerPosition);
         }
 
         if(moveDirection.y != 0)
@@ -256,9 +244,7 @@ public class MonsterMovement : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             roaming = true;
-            //Debug.Log("Player");
         }
-        //Debug.Log("Not Player");
         switch (spawnPosition)
         {
             case StartPosition.Up:
@@ -266,15 +252,15 @@ public class MonsterMovement : MonoBehaviour
                 path.y = transform.position.y;
                 break;
             case StartPosition.Down:
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path.y = transform.position.y;
                 break;
             case StartPosition.Left:
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path.x = transform.position.x;
                 break;
             case StartPosition.Right:
-                transform.rotation = Quaternion.Euler(0, 0, 270);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 path.x = transform.position.x;
                 break;
         }

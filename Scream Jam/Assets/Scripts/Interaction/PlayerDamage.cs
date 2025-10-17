@@ -54,22 +54,6 @@ public class PlayerDamage : MonoBehaviour
                 }
                 else
                 {
-                    if (hearts[i] != null)
-                    {
-                        Debug.Log("hearts good");
-                    }
-                    else
-                    {
-                        Debug.Log("Broken here");
-                    }
-                    if (hearts[i].sprite != null)
-                    {
-                        Debug.Log("Heart sprite good");
-                    }
-                    if (emptyHeart != null)
-                    {
-                        Debug.Log("Empty heart good");
-                    }
                     hearts[i].sprite = emptyHeart;
                 }
 
@@ -78,10 +62,6 @@ public class PlayerDamage : MonoBehaviour
                 {
                     hearts[i].enabled = true;
                 }
-                //else
-                //{
-                //    hearts[i].enabled = false;
-                //}
             }
 
             if (playerHealth < 75)
